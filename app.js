@@ -8,15 +8,15 @@ var location = yargs.argv._[0];
 if (!location) {
   console.log("Please provide a location");
 } else {
-  geocode(location, (error, data) => {
+  geocode(location, (error, { latitude, longitude, location }) => {
     if (error) {
       return console.log(error);
     }
-    forecast(data.latitude, data.longitude, (error, fdata) => {
+    forecast(latitude, longitude, (error, fdata) => {
       if (error) {
         return console.log(error);
       }
-      console.log(`Location:${data.location}`);
+      console.log(`Location:${location}`);
       console.log(`Weather: ${fdata}`);
     });
   });
