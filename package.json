@@ -18,6 +18,7 @@
   "homepage": "https://github.com/sbmsc/weather-app#readme",
   "dependencies": {
     "nodemon": "^1.19.1",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "yargs": "^13.2.4"
   }
 }
